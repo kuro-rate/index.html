@@ -9,12 +9,20 @@
         body{
              background-color: #e0f2fe; /*背景の色を水色にする*/
 
-            padding: 40px;              /*上下左右に40pxの余白を付ける*/
+            padding: 60px;              /*上下左右に40pxの余白を付ける*/
         }
+
+        body {
+            max-width: 800px;  /* 画面の最大幅を800ピクセルに制限します */
+            margin: 0 auto;    /* これが重要！左右の余白を自動調整して、全体を「真ん中」に寄せます */
+            padding: 20px;     /* スマホ画面などで見た時に、左右に少しだけ余白を作ります */
+        }
+    
         .answer{
             margin-left: 2em;           /*右にずらす*/
 
             background-color: #ffffff;  /* 枠の背景色を城にする*/
+            border-radius: 6px;
             border: 2px solid #bae6fd;  /*枠線を「3ピクセルの太さ・直線・少し濃い青」にする */
             padding: 15px;              /* 枠線と、中の文字との間に余白を作る */
             margin-top: 2px;
