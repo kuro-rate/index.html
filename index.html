@@ -6,31 +6,65 @@
     <title>kuro-rateのWebページ</title> <!-- ブラウザのタブに出てくる -->
     
     <style>
-        body{
-             background-color: #e0f2fe; /*背景の色を水色にする*/
-
-            padding: 60px;              /*上下左右に40pxの余白を付ける*/
+        html {
+            background-color: #eef0ed;
         }
 
         body {
-            max-width: 800px;  /* 画面の最大幅を800ピクセルに制限します */
-            margin: 0 auto;    /* これが重要！左右の余白を自動調整して、全体を「真ん中」に寄せます */
-            padding: 20px;     /* スマホ画面などで見た時に、左右に少しだけ余白を作ります */
+            box-sizing: border-box;
+            max-width: 800px;
+            margin: 28px auto;
+            padding: 24px 32px 32px;
+            background-color: #ffffff;
+            border: 1px solid #d5ddd9;
+            border-top: 6px solid #648b8d;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(45, 64, 62, 0.1);
         }
     
         .answer{
-            margin-left: 2em;           /*右にずらす*/
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 12px 16px;
+            background-color: #f7f8f6;
+            border: 1px solid #d9e0dc;
+            border-left: 4px solid #9bb9b4;
+            border-radius: 4px;
+        }
 
-            background-color: #ffffff;  /* 枠の背景色を城にする*/
-            border-radius: 6px;
-            border: 2px solid #bae6fd;  /*枠線を「3ピクセルの太さ・直線・少し濃い青」にする */
-            padding: 15px;              /* 枠線と、中の文字との間に余白を作る */
-            margin-top: 2px;
+        h2 {
+            max-width: 600px;
+            margin: 26px auto 10px;
+            padding: 8px 12px;
+            color: #354d4c;
+            background-color: #e8efeb;
+            border-left: 5px solid #648b8d;
+            border-radius: 0 4px 4px 0;
+            font-size: 1.1rem;
         }
 
         .center-title {
             text-align: center;
-            
+            margin: 4px 0 28px;
+            padding-bottom: 16px;
+            color: #426568;
+            border-bottom: 2px solid #d5dfda;
+        }
+
+        a {
+            color: #376c72;
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            color: #294f52;
+        }
+
+        @media (max-width: 560px) {
+            body {
+                margin: 12px;
+                padding: 20px 18px 24px;
+            }
         }
         
     </style>
