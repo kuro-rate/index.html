@@ -3,67 +3,121 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">  <!-- 文字化けを防ぐためのおまじない -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>kuro-rateのWebページ</title> <!-- ブラウザのタブに出てくる -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
     
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            color-scheme: light;
+            --page-bg: #ccebf3;
+            --card-bg: #ffffff;
+            --soft-blue: #e9f7fa;
+            --line-blue: #a9dce7;
+            --accent-blue: #55b8cc;
+            --text: #263f49;
+            --heading: #155e6c;
+        }
+
         html {
-            background-color: #eef0ed;
+            min-height: 100%;
+            background-color: var(--page-bg);
+            background-image: linear-gradient(160deg, #ccebf3 0%, #e4f5f8 55%, #c4e6ef 100%);
         }
 
         body {
-            box-sizing: border-box;
+            width: calc(100% - 32px);
+            color: var(--text);
+            font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN",
+                "M PLUS Rounded 1c", "Yu Gothic", "Meiryo", sans-serif;
+            line-height: 1.8;
             max-width: 800px;
-            margin: 28px auto;
-            padding: 24px 32px 32px;
-            background-color: #ffffff;
-            border: 1px solid #d5ddd9;
-            border-top: 6px solid #648b8d;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(45, 64, 62, 0.1);
+            margin: 32px auto;
+            padding: 28px 32px 36px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--line-blue);
+            border-top: 6px solid var(--accent-blue);
+            border-radius: 22px;
+            box-shadow: 0 10px 28px rgba(65, 155, 173, 0.13);
         }
     
         .answer{
             max-width: 600px;
             margin: 0 auto;
-            padding: 12px 16px;
-            background-color: #f7f8f6;
-            border: 1px solid #d9e0dc;
-            border-left: 4px solid #9bb9b4;
-            border-radius: 4px;
+            padding: 12px 18px;
+            background-color: var(--soft-blue);
+            border: 1px solid #c5e8ef;
+            border-left: 4px solid #69c4d5;
+            border-radius: 12px;
         }
 
         h2 {
             max-width: 600px;
-            margin: 26px auto 10px;
-            padding: 8px 12px;
-            color: #354d4c;
-            background-color: #e8efeb;
-            border-left: 5px solid #648b8d;
-            border-radius: 0 4px 4px 0;
-            font-size: 1.1rem;
+            margin: 28px auto 12px;
+            padding: 9px 14px;
+            color: var(--heading);
+            background-color: #d8f0f5;
+            border-left: 5px solid var(--accent-blue);
+            border-radius: 0 14px 14px 0;
+            font-size: 1.12rem;
         }
 
         .center-title {
             text-align: center;
-            margin: 4px 0 28px;
-            padding-bottom: 16px;
-            color: #426568;
-            border-bottom: 2px solid #d5dfda;
+            margin: 0 0 30px;
+            padding: 0 0 18px;
+            color: var(--heading);
+            border-bottom: 2px dashed var(--line-blue);
+            font-size: clamp(1.7rem, 5vw, 2.2rem);
+            letter-spacing: 0.06em;
         }
 
         a {
-            color: #376c72;
+            color: #075d70;
+            font-weight: 700;
             text-underline-offset: 3px;
         }
 
         a:hover {
-            color: #294f52;
+            color: #064655;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #72ccdc;
+            outline-offset: 3px;
+            border-radius: 3px;
         }
 
         @media (max-width: 560px) {
             body {
-                margin: 12px;
-                padding: 20px 18px 24px;
+                width: calc(100% - 20px);
+                margin: 10px auto;
+                padding: 20px 14px 26px;
+                border-top-width: 5px;
+                border-radius: 18px;
+            }
+
+            .center-title {
+                font-size: clamp(1.55rem, 7vw, 2rem);
+                margin-bottom: 22px;
+                padding-bottom: 14px;
+            }
+
+            h2 {
+                margin-top: 22px;
+                padding: 8px 12px;
+                font-size: 1.05rem;
+            }
+
+            .answer {
+                padding: 10px 12px;
+                overflow-wrap: anywhere;
             }
         }
         
